@@ -1,0 +1,8 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the Rose Day website with hero section, personalization form, interactive moments, and footer with live preview of customized content.",
+  "frontend/src/components/PersonalizationForm.tsx": "Form component with inputs for girlfriend name, sender name, and custom message, plus a reset button to restore defaults.",
+  "frontend/src/components/RoseDayMoments.tsx": "Interactive moments section with 6 clickable cards that toggle to reveal romantic messages, fully keyboard accessible.",
+  "frontend/src/index.css": "Global styles with romantic rose-themed OKLCH color palette, custom rose color utilities, subtle background pattern, and Playfair Display serif font integration.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom serif font family (Playfair Display) for romantic typography.",
+  "frontend/index.html": "HTML entry point with updated title, meta description, and Google Fonts links for Inter and Playfair Display fonts."
+}

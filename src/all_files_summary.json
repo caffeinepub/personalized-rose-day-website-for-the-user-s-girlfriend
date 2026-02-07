@@ -1,0 +1,16 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods or state.",
+  "feature_evidence.json": "Feature evidence report mapping Rose Day features to related files, components, and test IDs.",
+  "frontend-file-summaries.txt": "Text file containing short descriptions of key frontend files and their roles.",
+  "frontend/index.css": "Tailwind CSS base file defining romantic-themed OKLCH color variables and global styles for light and dark modes.",
+  "frontend/index.html": "HTML entry point setting page metadata and loading fonts and the React app root.",
+  "frontend/src/App.tsx": "Main React component rendering the themed Rose Day page with hero, personalization, and interactive moments.",
+  "frontend/src/components/PersonalizationForm.tsx": "Form component allowing users to edit names and a message with a reset option.",
+  "frontend/src/components/RoseDayMoments.tsx": "Component rendering clickable, accessible cards that reveal detailed romantic messages.",
+  "frontend/src/hooks/useActor.ts": "React hook creating and managing a backend actor tied to Internet Identity authentication state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and provider for managing Internet Identity login, loading stored identities, and exposing login state and actions.",
+  "frontend/src/index.css": "Defines Tailwind base styles and a custom rose-themed light/dark color palette, along with global typography and background settings.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and the Internet Identity provider.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom color tokens, fonts, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Describes the project state for a personalized Rose Day website, including features, requirements, and asset needs."
+}

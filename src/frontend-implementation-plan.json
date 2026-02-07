@@ -1,0 +1,127 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Personalized Rose Day Single-Page Experience",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Deliver a single-page Rose Day themed experience with romantic copy addressed to the girlfriend and no login requirement.",
+      "acceptanceCriteria": [
+        "App loads to a Rose Day themed page without requiring login",
+        "Page includes a prominent headline (e.g., “Happy Rose Day”) and a short romantic message addressed to the girlfriend",
+        "Content is readable and visually polished on both mobile and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page Rose Day experience as the app root view (headline, romantic copy, sections), ensuring it renders without any authentication flow and is responsive."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update document metadata (title/description if present) to match the Rose Day single-page experience and ensure English, romance-themed presentation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add client-side personalization inputs for girlfriend name, sender name, and custom message with instant preview and reset-to-default.",
+      "acceptanceCriteria": [
+        "UI provides input fields for girlfriend name, sender name, and a longer message",
+        "Preview updates immediately when inputs change",
+        "A “Reset to default” action restores the default sample text"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add client-side state for personalization (girlfriend name, sender name, message), bind to inputs, and render an immediate preview; include a Reset to default action. Use the shadcn-ui component library (e.g., input/textarea/button/card) to provide polished form controls and consistent UI styling. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement an interactive “Rose Day moments” section with 3–6 accessible clickable items that toggle reveal text.",
+      "acceptanceCriteria": [
+        "There are at least 3 interactive items",
+        "Each item toggles/reveals additional text on click/tap",
+        "Interactions work with keyboard navigation (tab + enter/space)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/RoseDayMoments.tsx",
+          "operation": "create",
+          "description": "Create an accessible moments component with 3–6 items implemented as keyboard-operable controls (e.g., buttons with aria-expanded) that toggle reveal/hide short romantic text. Use the shadcn-ui component library (e.g., Card) to provide consistent interactive styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the RoseDayMoments section into the single-page layout and ensure it is reachable via natural reading order and keyboard navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a cohesive romantic theme (colors, typography, spacing, component styling) consistently across the single page and ensure mobile layout quality.",
+      "acceptanceCriteria": [
+        "Theme is consistent across sections and components",
+        "Theme does not rely on a generic/default blue-purple gradient look",
+        "Mobile layout is well-spaced with no overlapping elements"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define a distinctive romantic theme using CSS variables and Tailwind-friendly base styles (warm rose/cream palette, refined typography, spacing rules) and apply global background treatment without using a generic blue-purple gradient; ensure responsive spacing to avoid overlaps on mobile."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme tokens (e.g., brand/romantic color tokens and any typography/spacing defaults) to support consistent styling across the Rose Day page."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the romantic theme consistently across sections (hero, personalization, moments, footer) using the shared theme tokens and responsive layout primitives."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add required generated static images and render them as crisp, layout-stable frontend assets.",
+      "acceptanceCriteria": [
+        "All required generated images are present in frontend/public/assets/generated",
+        "Images are referenced directly by the frontend (no backend/image API)",
+        "Images display crisply on mobile and desktop and do not cause layout shifts"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/rose-hero.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated hero illustration asset at the required path and filename for direct frontend use."
+        },
+        {
+          "path": "frontend/public/assets/generated/rose-pattern.dim_2048x2048.png",
+          "operation": "create",
+          "description": "Add the generated seamless rose-petal pattern background asset at the required path and filename for direct frontend use."
+        },
+        {
+          "path": "frontend/public/assets/generated/rose-icon.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated minimal rose icon asset at the required path and filename for direct frontend use."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Render the hero illustration (frontend/public/assets/generated/rose-hero.dim_1600x900.png) and rose icon (frontend/public/assets/generated/rose-icon.dim_256x256.png) with explicit sizing to prevent layout shifts and to remain crisp on mobile/desktop."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Apply the subtle patterned background using the static asset frontend/public/assets/generated/rose-pattern.dim_2048x2048.png in a way that avoids layout shifts and preserves readability."
+        }
+      ]
+    }
+  ]
+}

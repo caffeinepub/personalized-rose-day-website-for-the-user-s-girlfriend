@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* Rose Day romantic palette - Light mode */
+        --background: 0.99 0.01 15;
+        --foreground: 0.25 0.04 15;
+        --card: 1 0.01 15;
+        --card-foreground: 0.25 0.04 15;
+        --popover: 1 0.01 15;
+        --popover-foreground: 0.25 0.04 15;
+        --primary: 0.55 0.15 15;
+        --primary-foreground: 0.99 0.01 15;
+        --secondary: 0.96 0.02 25;
+        --secondary-foreground: 0.35 0.05 15;
+        --muted: 0.96 0.02 20;
+        --muted-foreground: 0.55 0.03 15;
+        --accent: 0.94 0.03 30;
+        --accent-foreground: 0.35 0.05 15;
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.99 0.01 15;
+        --border: 0.92 0.02 20;
+        --input: 0.92 0.02 20;
+        --ring: 0.65 0.12 15;
+        --chart-1: 0.65 0.15 15;
+        --chart-2: 0.70 0.12 30;
+        --chart-3: 0.60 0.10 350;
+        --chart-4: 0.75 0.08 40;
+        --chart-5: 0.68 0.14 10;
+        
+        /* Custom rose palette tokens */
+        --rose-50: 0.98 0.02 15;
+        --rose-100: 0.95 0.03 15;
+        --rose-200: 0.90 0.04 15;
+        --rose-300: 0.80 0.08 15;
+        --rose-400: 0.70 0.12 15;
+        --rose-500: 0.60 0.15 15;
+        --rose-600: 0.50 0.16 15;
+        --rose-700: 0.40 0.14 15;
+        --rose-800: 0.30 0.10 15;
+        --rose-900: 0.22 0.06 15;
+        
+        --cream-50: 0.98 0.01 50;
+        --blush-50: 0.97 0.02 5;
+    }
+
+    .dark {
+        /* Rose Day romantic palette - Dark mode */
+        --background: 0.18 0.03 15;
+        --foreground: 0.96 0.01 15;
+        --card: 0.22 0.03 15;
+        --card-foreground: 0.96 0.01 15;
+        --popover: 0.25 0.03 15;
+        --popover-foreground: 0.96 0.01 15;
+        --primary: 0.85 0.08 15;
+        --primary-foreground: 0.22 0.04 15;
+        --secondary: 0.28 0.04 20;
+        --secondary-foreground: 0.96 0.01 15;
+        --muted: 0.30 0.04 15;
+        --muted-foreground: 0.70 0.03 15;
+        --accent: 0.35 0.05 25;
+        --accent-foreground: 0.96 0.01 15;
+        --destructive: 0.65 0.18 20;
+        --destructive-foreground: 0.22 0.04 15;
+        --border: 0.30 0.04 15;
+        --input: 0.32 0.04 15;
+        --ring: 0.60 0.10 15;
+        --chart-1: 0.65 0.15 15;
+        --chart-2: 0.70 0.12 30;
+        --chart-3: 0.60 0.10 350;
+        --chart-4: 0.75 0.08 40;
+        --chart-5: 0.68 0.14 10;
+        
+        /* Custom rose palette tokens - dark mode */
+        --rose-50: 0.30 0.04 15;
+        --rose-100: 0.35 0.05 15;
+        --rose-200: 0.40 0.06 15;
+        --rose-300: 0.50 0.08 15;
+        --rose-400: 0.60 0.10 15;
+        --rose-500: 0.70 0.12 15;
+        --rose-600: 0.75 0.13 15;
+        --rose-700: 0.80 0.10 15;
+        --rose-800: 0.85 0.08 15;
+        --rose-900: 0.90 0.05 15;
+        
+        --cream-50: 0.32 0.03 50;
+        --blush-50: 0.28 0.03 5;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        background-image: url('/assets/generated/rose-pattern.dim_2048x2048.png');
+        background-size: 400px 400px;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-position: center;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    }
+}
+
+@layer utilities {
+    .font-serif {
+        font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+    }
+    
+    .text-rose-50 {
+        color: oklch(var(--rose-50));
+    }
+    .text-rose-100 {
+        color: oklch(var(--rose-100));
+    }
+    .text-rose-200 {
+        color: oklch(var(--rose-200));
+    }
+    .text-rose-300 {
+        color: oklch(var(--rose-300));
+    }
+    .text-rose-400 {
+        color: oklch(var(--rose-400));
+    }
+    .text-rose-500 {
+        color: oklch(var(--rose-500));
+    }
+    .text-rose-600 {
+        color: oklch(var(--rose-600));
+    }
+    .text-rose-700 {
+        color: oklch(var(--rose-700));
+    }
+    .text-rose-800 {
+        color: oklch(var(--rose-800));
+    }
+    .text-rose-900 {
+        color: oklch(var(--rose-900));
+    }
+    
+    .bg-rose-50 {
+        background-color: oklch(var(--rose-50));
+    }
+    .bg-rose-100 {
+        background-color: oklch(var(--rose-100));
+    }
+    .bg-rose-200 {
+        background-color: oklch(var(--rose-200));
+    }
+    .bg-rose-300 {
+        background-color: oklch(var(--rose-300));
+    }
+    .bg-rose-500 {
+        background-color: oklch(var(--rose-500));
+    }
+    
+    .border-rose-200 {
+        border-color: oklch(var(--rose-200));
+    }
+    .border-rose-300 {
+        border-color: oklch(var(--rose-300));
+    }
+    
+    .from-rose-50 {
+        --tw-gradient-from: oklch(var(--rose-50));
+    }
+    .via-cream-50 {
+        --tw-gradient-via: oklch(var(--cream-50));
+    }
+    .to-blush-50 {
+        --tw-gradient-to: oklch(var(--blush-50));
+    }
+    .from-blush-50 {
+        --tw-gradient-from: oklch(var(--blush-50));
+    }
+    .to-rose-50 {
+        --tw-gradient-to: oklch(var(--rose-50));
+    }
+    
+    .fill-rose-500 {
+        fill: oklch(var(--rose-500));
+    }
+    
+    .hover\:bg-rose-50:hover {
+        background-color: oklch(var(--rose-50));
+    }
+    .hover\:text-rose-900:hover {
+        color: oklch(var(--rose-900));
+    }
+    
+    .decoration-rose-300 {
+        text-decoration-color: oklch(var(--rose-300));
+    }
+    
+    .focus-visible\:ring-rose-400:focus-visible {
+        --tw-ring-color: oklch(var(--rose-400));
+    }
+}

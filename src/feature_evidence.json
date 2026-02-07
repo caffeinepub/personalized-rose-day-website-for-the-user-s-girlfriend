@@ -1,0 +1,100 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-rose-day-website-experience-dedicated-to-the-user-s-girlfriend-with-romantic-copy-and-a-clear-rose-day-theme",
+      "featureTitle": "Create a single-page Rose Day website experience dedicated to the user's girlfriend, with romantic copy and a clear Rose Day theme.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-personalization-inputs-client-side-so-the-user-can-set-girlfriend-name-sender-name-and-a-custom-message-and-immediately-preview-the-updated-page",
+      "featureTitle": "Add personalization inputs (client-side) so the user can set: girlfriend name, sender name, and a custom message, and immediately preview the updated page.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-a-small-interactive-rose-day-moments-section-client-side-such-as-3-6-clickable-cards-steps-e-g-compliment-memory-promise-that-reveal-short-messages-when-clicked",
+      "featureTitle": "Include a small interactive “Rose Day moments” section (client-side) such as 3–6 clickable cards/steps (e.g., Compliment, Memory, Promise) that reveal short messages when clicked.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/RoseDayMoments.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-coherent-distinctive-romantic-visual-theme-colors-typography-spacing-and-component-styling-and-apply-it-consistently-across-the-site-avoid-a-default-template-look",
+      "featureTitle": "Implement a coherent, distinctive romantic visual theme (colors, typography, spacing, and component styling) and apply it consistently across the site (avoid a default/template look).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-add-custom-static-images-for-the-site-hero-illustration-small-decorative-assets-and-render-them-from-the-frontend-as-static-assets",
+      "featureTitle": "Generate and add custom static images for the site (hero/illustration + small decorative assets) and render them from the frontend as static assets.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

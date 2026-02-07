@@ -1,0 +1,110 @@
+{
+  "kind": "build_request",
+  "title": "Personalized Rose Day website for the user's girlfriend",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page Rose Day website experience dedicated to the user's girlfriend, with romantic copy and a clear Rose Day theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "make a website for roseday for MY OWN GIRLFRIEND"
+        ]
+      },
+      "acceptanceCriteria": [
+        "App loads to a Rose Day themed page without requiring login",
+        "Page includes a prominent headline (e.g., “Happy Rose Day”) and a short romantic message addressed to the girlfriend",
+        "Content is readable and visually polished on both mobile and desktop"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add personalization inputs (client-side) so the user can set: girlfriend name, sender name, and a custom message, and immediately preview the updated page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "make a website for roseday for MY OWN GIRLFRIEND"
+        ]
+      },
+      "acceptanceCriteria": [
+        "UI provides input fields for girlfriend name, sender name, and a longer message",
+        "Preview updates immediately when inputs change",
+        "A “Reset to default” action restores the default sample text"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Include a small interactive “Rose Day moments” section (client-side) such as 3–6 clickable cards/steps (e.g., Compliment, Memory, Promise) that reveal short messages when clicked.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "make a website for roseday for MY OWN GIRLFRIEND"
+        ]
+      },
+      "acceptanceCriteria": [
+        "There are at least 3 interactive items",
+        "Each item toggles/reveals additional text on click/tap",
+        "Interactions work with keyboard navigation (tab + enter/space)"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a coherent, distinctive romantic visual theme (colors, typography, spacing, and component styling) and apply it consistently across the site (avoid a default/template look).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Theme is consistent across sections and components",
+        "Theme does not rely on a generic/default blue-purple gradient look",
+        "Mobile layout is well-spaced with no overlapping elements"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Generate and add custom static images for the site (hero/illustration + small decorative assets) and render them from the frontend as static assets.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required generated images are present in frontend/public/assets/generated",
+        "Images are referenced directly by the frontend (no backend/image API)",
+        "Images display crisply on mobile and desktop and do not cause layout shifts"
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must not modify files under the immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Backend must follow the single-actor architecture (all Motoko logic in backend/main.mo); only add migration.mo if persistent state upgrades are necessary",
+    "Use English for all user-facing text"
+  ],
+  "nonGoals": [
+    "Internet Identity authentication or user accounts",
+    "Sending emails, SMS, push notifications, or any external messaging",
+    "Real-time chat or WebSocket features",
+    "Integrations with external databases or third-party services"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Romantic rose-themed hero illustration with soft warm tones (rose-hero.dim_1600x900.png)",
+      "Seamless subtle rose-petal pattern background (rose-pattern.dim_2048x2048.png)",
+      "Minimal rose icon (rose-icon.dim_256x256.png)"
+    ],
+    "edits": []
+  }
+}
